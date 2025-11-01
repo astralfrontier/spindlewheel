@@ -1,17 +1,20 @@
-import { getCardsForDecks, randoms, type SpindlewheelCard } from "./gamedata";
+import { getCardsForDecks, random, randoms } from "./gamedata";
 
 import "./App.css";
 import { useCallback, useEffect, useState } from "react";
+import CardView, { type SpindlewheelCardDisplay } from "./CardView";
 
 const cards = getCardsForDecks();
 
-function cardDraw(limit: number): SpindlewheelCard[] {
+function cardDraw(limit: number): SpindlewheelCardDisplay[] {
   const indices = randoms(cards.length, limit);
-  return indices.map((i) => cards[i]);
+  return indices.map((i) => ({ ...cards[i], flipped: random(2) == 0 }));
 }
 
 function App() {
-  const [selectedCards, setSelectedCards] = useState<SpindlewheelCard[]>([]);
+  const [selectedCards, setSelectedCards] = useState<SpindlewheelCardDisplay[]>(
+    []
+  );
 
   useEffect(() => {
     setSelectedCards(cardDraw(5));
@@ -26,9 +29,9 @@ function App() {
       </header>
       <main className="container">
         <div className="grid">
-          {selectedCards.map((card: SpindlewheelCard) => (
+          {selectedCards.map((card: SpindlewheelCardDisplay) => (
             <div key={card.file}>
-              <img src={card.file} />
+              <CardView card={card} />
             </div>
           ))}
         </div>
