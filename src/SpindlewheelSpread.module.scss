@@ -1,0 +1,36 @@
+.spreadgrid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.spreadcell {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+
+.core {
+  grid-column-start: 1;
+  grid-row: 1;
+}
+.crossing {
+  grid-column-start: 1;
+  grid-row: 2;
+}
+.boon {
+  grid-column-start: 2;
+  grid-row: 1;
+}
+.bane {
+  grid-column-start: 2;
+  grid-row: 2;
+}
+.desire {
+  grid-column-start: 3;
+  grid-row: 1;
+}
+.method {
+  grid-column-start: 3;
+  grid-row: 2;
+}

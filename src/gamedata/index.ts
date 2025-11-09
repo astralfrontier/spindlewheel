@@ -45,3 +45,9 @@ export function getCardsForDecks() {
       )
   );
 }
+
+export function drawCards(limit: number): SpindlewheelCard[] {
+  const cards = getCardsForDecks();
+  const indices = randoms(cards.length, limit);
+  return indices.map((i) => ({ ...cards[i] }));
+}

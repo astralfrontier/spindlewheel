@@ -1,0 +1,14 @@
+$maxdimension: 390px;
+.cardframe {
+  width: $maxdimension;
+  height: $maxdimension;
+
+  img {
+    max-width: $maxdimension;
+    max-height: $maxdimension;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
