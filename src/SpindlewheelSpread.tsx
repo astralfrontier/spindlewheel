@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import type { SpindlewheelCardState } from "./SpindlewheelCardImage";
 
 import styles from "./SpindlewheelSpread.module.scss";
@@ -17,18 +17,36 @@ function SpindlewheelSpread(props: SpindlewheelSpreadProps) {
 
   useEffect(() => {
     const newSlots: Record<string, SpindlewheelCardState> = {};
-    const cards = drawCards(6);
+    const cards = drawCards(slotNames.length);
     slotNames.forEach((slot) => {
       const card = cards.pop();
       if (card) {
         newSlots[slot] = { ...card, flipped: false };
         console.dir(newSlots[slot]);
-      } else {
-        console.error("Card was null while drawing");
       }
     });
     setSlots(newSlots);
   }, [spreadname]);
+
+  const flipCardAction = useCallback(
+    (slotName: string) => () => {
+      setSlots((slots) => ({
+        ...slots,
+        [slotName]: { ...slots[slotName], flipped: !slots[slotName].flipped },
+      }));
+    },
+    []
+  );
+
+  const drawCardAction = useCallback(
+    (slotName: string) => () => {
+      setSlots((slots) => ({
+        ...slots,
+        [slotName]: { ...drawCards(1)[0], flipped: !slots[slotName].flipped },
+      }));
+    },
+    []
+  );
 
   return (
     <>
@@ -38,6 +56,12 @@ function SpindlewheelSpread(props: SpindlewheelSpreadProps) {
             className={`${styles[slotName]} ${styles.spreadcell}`}
             key={slotName}
           >
+            <button onClick={flipCardAction(slotName)}>
+              <i className="fa-solid fa-up-down"></i>
+            </button>
+            <button onClick={drawCardAction(slotName)}>
+              <i className="fa-solid fa-rotate"></i>
+            </button>
             {slots[slotName] && (
               <SpindlewheelCardSlot
                 card={slots[slotName]}
