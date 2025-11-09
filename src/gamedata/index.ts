@@ -14,6 +14,10 @@ export interface SpindlewheelCard {
   bottom?: string;
 }
 
+export interface SpindlewheelCardState extends SpindlewheelCard {
+  flipped: boolean;
+}
+
 export interface SpindlewheelDeck {
   name: string;
   cards: SpindlewheelCard[];
@@ -46,8 +50,8 @@ export function getCardsForDecks() {
   );
 }
 
-export function drawCards(limit: number): SpindlewheelCard[] {
+export function drawCards(limit: number): SpindlewheelCardState[] {
   const cards = getCardsForDecks();
   const indices = randoms(cards.length, limit);
-  return indices.map((i) => ({ ...cards[i] }));
+  return indices.map((i) => ({ ...cards[i], flipped: random(2) == 0 }));
 }

@@ -1,10 +1,6 @@
-import { type SpindlewheelCard } from "./gamedata";
+import { type SpindlewheelCardState } from "./gamedata";
 
 import styles from "./SpindlewheelCardImage.module.scss";
-
-export interface SpindlewheelCardState extends SpindlewheelCard {
-  flipped: boolean;
-}
 
 interface SpindlewheelCardImageProps {
   card: SpindlewheelCardState;

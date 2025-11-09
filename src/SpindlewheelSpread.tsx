@@ -1,8 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
-import type { SpindlewheelCardState } from "./SpindlewheelCardImage";
 
 import styles from "./SpindlewheelSpread.module.scss";
-import { drawCards } from "./gamedata";
+import { drawCards, type SpindlewheelCardState } from "./gamedata";
 import SpindlewheelCardSlot from "./SpindlewheelCardSlot";
 
 interface SpindlewheelSpreadProps {
@@ -21,7 +20,7 @@ function SpindlewheelSpread(props: SpindlewheelSpreadProps) {
     slotNames.forEach((slot) => {
       const card = cards.pop();
       if (card) {
-        newSlots[slot] = { ...card, flipped: false };
+        newSlots[slot] = { ...card };
         console.dir(newSlots[slot]);
       }
     });
@@ -42,7 +41,7 @@ function SpindlewheelSpread(props: SpindlewheelSpreadProps) {
     (slotName: string) => () => {
       setSlots((slots) => ({
         ...slots,
-        [slotName]: { ...drawCards(1)[0], flipped: !slots[slotName].flipped },
+        [slotName]: { ...drawCards(1)[0] },
       }));
     },
     []
