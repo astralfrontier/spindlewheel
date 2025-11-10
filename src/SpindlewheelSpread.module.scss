@@ -1,8 +1,39 @@
+$spreadareas: ("core", "crossing", "boon", "bane", "desire", "method");
+
 .spreadgrid {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "core boon desire"
+    "crossing bane method";
 }
+
+@media (max-width: 600px) {
+  .spreadgrid {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "core"
+      "crossing"
+      "boon"
+      "bane"
+      "desire"
+      "method";
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1024px) {
+  .spreadgrid {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "core crossing"
+      "boon bane"
+      "desire method";
+  }
+}
+
 
 .spreadcell {
   margin-left: auto;
@@ -10,27 +41,8 @@
   padding: 1rem;
 }
 
-.core {
-  grid-column-start: 1;
-  grid-row: 1;
-}
-.crossing {
-  grid-column-start: 1;
-  grid-row: 2;
-}
-.boon {
-  grid-column-start: 2;
-  grid-row: 1;
-}
-.bane {
-  grid-column-start: 2;
-  grid-row: 2;
-}
-.desire {
-  grid-column-start: 3;
-  grid-row: 1;
-}
-.method {
-  grid-column-start: 3;
-  grid-row: 2;
+@each $slot in $spreadareas {
+  .#{$slot} {
+    grid-area: #{$slot};
+  }
 }
