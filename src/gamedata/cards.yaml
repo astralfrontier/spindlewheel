@@ -1,106 +1,312 @@
 decks:
   - name: Standard Deck
     cards:
-      - file: /standard/adversary.png
-      - file: /standard/alpha.png
-      - file: /standard/angel.png
-      - file: /standard/apostle.png
-      - file: /standard/apprentice.png
-      - file: /standard/arachne.png
-      - file: /standard/arbolists.png
-      - file: /standard/artisan.png
-      - file: /standard/badblood.png
-      - file: /standard/bandit.png
-      - file: /standard/behemoth.png
-      - file: /standard/blackbook.png
-      - file: /standard/blizzard.png
-      - file: /standard/bridge.png
-      - file: /standard/changeling.png
-      - file: /standard/chasm.png
-      - file: /standard/cursedsword.png
-      - file: /standard/darkness.png
-      - file: /standard/doctor.png
-      - file: /standard/duchess.png
-      - file: /standard/echo.png
-      - file: /standard/empress.png
-      - file: /standard/fallen.png
-      - file: /standard/famine.png
-      - file: /standard/ferrymanstoll.png
-      - file: /standard/fiddlersrosin.png
-      - file: /standard/finalrose.png
-      - file: /standard/flood.png
-      - file: /standard/fool.png
-      - file: /standard/fortuity.png
-      - file: /standard/fortune.png
-      - file: /standard/fountain.png
-      - file: /standard/gildedlily.png
-      - file: /standard/glacier.png
-      - file: /standard/glasslens.png
-      - file: /standard/godless.png
-      - file: /standard/goosedown.png
-      - file: /standard/grandmothersring.png
-      - file: /standard/grave.png
-      - file: /standard/guillotine.png
-      - file: /standard/healingword.png
-      - file: /standard/hearth.png
-      - file: /standard/heatwave.png
-      - file: /standard/heavycrown.png
-      - file: /standard/holystricture.png
-      - file: /standard/hunter.png
-      - file: /standard/keepers.png
-      - file: /standard/knight.png
-      - file: /standard/laughingmimic.png
-      - file: /standard/leviathan.png
-      - file: /standard/lieutenant.png
-      - file: /standard/lonelyaria.png
-      - file: /standard/lovers.png
-      - file: /standard/luck.png
-      - file: /standard/magicbeans.png
-      - file: /standard/magician.png
-      - file: /standard/merchant.png
-      - file: /standard/moon.png
-      - file: /standard/motherofmonsters.png
-      - file: /standard/nightmare.png
-      - file: /standard/oathbound.png
-      - file: /standard/opheliasgarland.png
-      - file: /standard/oracle.png
-      - file: /standard/overgrowth.png
-      - file: /standard/peacekeeper.png
-      - file: /standard/phoenixwine.png
-      - file: /standard/plague.png
-      - file: /standard/polaris.png
-      - file: /standard/poppyflute.png
-      - file: /standard/priestess.png
-      - file: /standard/princeoffate.png
-      - file: /standard/princess.png
-      - file: /standard/quietknife.png
-      - file: /standard/raisedglass.png
-      - file: /standard/ratking.png
-      - file: /standard/righthandofsolomonash.png
-      - file: /standard/romancandle.png
-      - file: /standard/scholar.png
-      - file: /standard/sea.png
-      - file: /standard/secondson.png
-      - file: /standard/shadowthorns.png
-      - file: /standard/siren.png
-      - file: /standard/snakeoil.png
-      - file: /standard/spinster.png
-      - file: /standard/spitfire.png
-      - file: /standard/star.png
-      - file: /standard/stonesoup.png
-      - file: /standard/survivor.png
-      - file: /standard/tapestryloom.png
-      - file: /standard/tenderofblooms.png
-      - file: /standard/tinpenny.png
-      - file: /standard/trickster.png
-      - file: /standard/unbrokenmold.png
-      - file: /standard/unicorn.png
-      - file: /standard/vagabond.png
-      - file: /standard/vampire.png
-      - file: /standard/volcano.png
-      - file: /standard/vultures.png
-      - file: /standard/walkers.png
-      - file: /standard/wildfire.png
-      - file: /standard/willow.png
-      - file: /standard/windfall.png
-      - file: /standard/witch.png
+      - name: Adversary
+        abbr: ADV
+        file: /standard/adversary.png
+      - name: Alpha
+        abbr: ALF
+        file: /standard/alpha.png
+      - name: Angel
+        abbr: ANG
+        file: /standard/angel.png
+      - name: Apostle
+        abbr: APS
+        file: /standard/apostle.png
+      - name: Apprentice
+        abbr: APR
+        file: /standard/apprentice.png
+      - name: Arachne
+        abbr: ARA
+        file: /standard/arachne.png
+      - name: Arbolists
+        abbr: ARB
+        file: /standard/arbolists.png
+      - name: Artisan
+        abbr: ART
+        file: /standard/artisan.png
+      - name: Bad Blood
+        abbr: BAD
+        file: /standard/badblood.png
+      - name: Bandit
+        abbr: BND
+        file: /standard/bandit.png
+      - name: Behemoth
+        abbr: BEH
+        file: /standard/behemoth.png
+      - name: Black Book
+        abbr: BLK
+        file: /standard/blackbook.png
+      - name: Blizzard
+        abbr: BLZ
+        file: /standard/blizzard.png
+      - name: Bridge
+        abbr: BRG
+        file: /standard/bridge.png
+      - name: Changeling
+        abbr: CNG
+        file: /standard/changeling.png
+      - name: Chasm
+        abbr: CSM
+        file: /standard/chasm.png
+      - name: Cursed Sword
+        abbr: CSW
+        file: /standard/cursedsword.png
+      - name: Darkness
+        abbr: DRK
+        file: /standard/darkness.png
+      - name: Doctor
+        abbr: DOC
+        file: /standard/doctor.png
+      - name: Duchess
+        abbr: DCH
+        file: /standard/duchess.png
+      - name: Echo
+        abbr: ECO
+        file: /standard/echo.png
+      - name: Empress
+        abbr: EMP
+        file: /standard/empress.png
+      - name: The Fallen
+        abbr: FLN
+        file: /standard/fallen.png
+      - name: Famine
+        abbr: FMN
+        file: /standard/famine.png
+      - name: Ferryman's Toll
+        abbr: FRY
+        file: /standard/ferrymanstoll.png
+      - name: Fiddler's Rosin
+        abbr: FRS
+        file: /standard/fiddlersrosin.png
+      - name: The Final Rose
+        abbr: TFR
+        file: /standard/finalrose.png
+      - name: Flood
+        abbr: FLD
+        file: /standard/flood.png
+      - name: Fool
+        abbr: FOL
+        file: /standard/fool.png
+      - name: Fortuity
+        abbr: FTY
+        file: /standard/fortuity.png
+      - name: Fortune
+        abbr: FOR
+        file: /standard/fortune.png
+      - name: Fountain
+        abbr: FTN
+        file: /standard/fountain.png
+      - name: Gilded Lily
+        abbr: GLY
+        file: /standard/gildedlily.png
+      - name: Glacier
+        abbr: GLC
+        file: /standard/glacier.png
+      - name: Glass Lens
+        abbr: GLN
+        file: /standard/glasslens.png
+      - name: Godless
+        abbr: GOD
+        file: /standard/godless.png
+      - name: Goose Down
+        abbr: GDN
+        file: /standard/goosedown.png
+      - name: Grandmother's Ring
+        abbr: GMR
+        file: /standard/grandmothersring.png
+      - name: The Grave
+        abbr: GRV
+        file: /standard/grave.png
+      - name: Guillotine
+        abbr: GLT
+        file: /standard/guillotine.png
+      - name: Healing Word
+        abbr: HLW
+        file: /standard/healingword.png
+      - name: Hearth
+        abbr: HRT
+        file: /standard/hearth.png
+      - name: Heatwave
+        abbr: HTW
+        file: /standard/heatwave.png
+      - name: Heavy Crown
+        abbr: HVC
+        file: /standard/heavycrown.png
+      - name: Holy Stricture
+        abbr: HST
+        file: /standard/holystricture.png
+      - name: Hunter
+        abbr: HNT
+        file: /standard/hunter.png
+      - name: Keepers
+        abbr: KPR
+        file: /standard/keepers.png
+      - name: Knight
+        abbr: KNT
+        file: /standard/knight.png
+      - name: Laughing Mimic
+        abbr: LMC
+        file: /standard/laughingmimic.png
+      - name: Leviathan
+        abbr: LVT
+        file: /standard/leviathan.png
+      - name: Lieutenant
+        abbr: LT
+        file: /standard/lieutenant.png
+      - name: Lonely Aria
+        abbr: LAR
+        file: /standard/lonelyaria.png
+      - name: The Lovers
+        abbr: LVR
+        file: /standard/lovers.png
+      - name: Luck
+        abbr: LUC
+        file: /standard/luck.png
+      - name: Magic Beans
+        abbr: MGB
+        file: /standard/magicbeans.png
+      - name: Magician
+        abbr: MGC
+        file: /standard/magician.png
+      - name: Merchant
+        abbr: MER
+        file: /standard/merchant.png
+      - name: Moon
+        abbr: MON
+        file: /standard/moon.png
+      - name: Mother of Monsters
+        abbr: MOM
+        file: /standard/motherofmonsters.png
+      - name: Nightmare
+        abbr: NGT
+        file: /standard/nightmare.png
+      - name: Oathbound
+        abbr: OBD
+        file: /standard/oathbound.png
+      - name: Ophelia's Garland
+        abbr: OGL
+        file: /standard/opheliasgarland.png
+      - name: Oracle
+        abbr: ORC
+        file: /standard/oracle.png
+      - name: Overgrowth
+        abbr: OGR
+        file: /standard/overgrowth.png
+      - name: Peacekeeper
+        abbr: PCK
+        file: /standard/peacekeeper.png
+      - name: Phoenix Wine
+        abbr: PXW
+        file: /standard/phoenixwine.png
+      - name: Plague
+        abbr: PLG
+        file: /standard/plague.png
+      - name: Polaris
+        abbr: PLS
+        file: /standard/polaris.png
+      - name: Poppy Flute
+        abbr: PFL
+        file: /standard/poppyflute.png
+      - name: Priestess
+        abbr: PTS
+        file: /standard/priestess.png
+      - name: Prince of Fate
+        abbr: POF
+        file: /standard/princeoffate.png
+      - name: Princess
+        abbr: PRC
+        file: /standard/princess.png
+      - name: Quiet Knife
+        abbr: QKN
+        file: /standard/quietknife.png
+      - name: A Raised Glass
+        abbr: ARG
+        file: /standard/raisedglass.png
+      - name: Rat King
+        abbr: RKN
+        file: /standard/ratking.png
+      - name: Right Hand of Solomon Ash
+        abbr: ASH
+        file: /standard/righthandofsolomonash.png
+      - name: Roman Candle
+        abbr: RMC
+        file: /standard/romancandle.png
+      - name: Scholar
+        abbr: SCH
+        file: /standard/scholar.png
+      - name: The Sea
+        abbr: SEA
+        file: /standard/sea.png
+      - name: Second Son
+        abbr: SON
+        file: /standard/secondson.png
+      - name: Shadowthorns
+        abbr: STH
+        file: /standard/shadowthorns.png
+      - name: Siren
+        abbr: SRN
+        file: /standard/siren.png
+      - name: Snake Oil
+        abbr: OIL
+        file: /standard/snakeoil.png
+      - name: Spinster
+        abbr: SPN
+        file: /standard/spinster.png
+      - name: Spitfire
+        abbr: SPT
+        file: /standard/spitfire.png
+      - name: Star
+        abbr: STR
+        file: /standard/star.png
+      - name: Stone Soup
+        abbr: STS
+        file: /standard/stonesoup.png
+      - name: Survivor
+        abbr: SVR
+        file: /standard/survivor.png
+      - name: Tapestry Loom
+        abbr: TLM
+        file: /standard/tapestryloom.png
+      - name: Tender of Blooms
+        abbr: TOB
+        file: /standard/tenderofblooms.png
+      - name: Tin Penny
+        abbr: TPY
+        file: /standard/tinpenny.png
+      - name: Trickster
+        abbr: TRK
+        file: /standard/trickster.png
+      - name: Unbroken Mold
+        abbr: UBM
+        file: /standard/unbrokenmold.png
+      - name: Unicorn
+        abbr: UNI
+        file: /standard/unicorn.png
+      - name: Vagabond
+        abbr: VGB
+        file: /standard/vagabond.png
+      - name: Vampire
+        abbr: VMP
+        file: /standard/vampire.png
+      - name: Volcano
+        abbr: VLC
+        file: /standard/volcano.png
+      - name: Vultures
+        abbr: VLT
+        file: /standard/vultures.png
+      - name: Walkers
+        abbr: WLK
+        file: /standard/walkers.png
+      - name: Wildfire
+        abbr: WLF
+        file: /standard/wildfire.png
+      - name: Willow
+        abbr: WLW
+        file: /standard/willow.png
+      - name: Windfall
+        abbr: WDF
+        file: /standard/windfall.png
+      - name: Witch
+        abbr: WTC
+        file: /standard/witch.png

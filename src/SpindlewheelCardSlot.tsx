@@ -1,4 +1,4 @@
-import type { SpindlewheelCardState } from "./SpindlewheelCardImage";
+import type { SpindlewheelCardState } from "./gamedata";
 import SpindlewheelCardImage from "./SpindlewheelCardImage";
 
 import styles from "./SpindlewheelCardSlot.module.scss";
@@ -17,7 +17,9 @@ function SpindlewheelCardSlot(props: SpindlewheelCardSlotProps) {
         <div className={styles.imageframe}>
           <SpindlewheelCardImage card={card} />
         </div>
-        <div className={styles.slotname}>{slot.toUpperCase()}</div>
+        <div className={styles.slotname}>
+          {slot.toUpperCase()}: {card.name} {card.flipped ? " (flipped)" : ""}
+        </div>
       </div>
     </>
   );

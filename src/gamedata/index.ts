@@ -5,7 +5,10 @@ export interface SpindlewheelCard {
   file: string;
 
   // The human-readable name of the card
-  name?: string;
+  name: string;
+
+  // An abbreviated version of the card name, used for state management
+  abbr: string;
 
   // The top facing text of the card
   top?: string;
